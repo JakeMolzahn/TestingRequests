@@ -19,3 +19,7 @@
 #ignore rubymine changes
 .idea/*
 .idea/
+
+.idea/dataSources.xml
+
+.idea/workspace.xml
