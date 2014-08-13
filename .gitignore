@@ -18,4 +18,4 @@
 
 #ignore rubymine changes
 .idea/*
-
+.idea/
