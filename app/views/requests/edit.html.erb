@@ -1,0 +1,29 @@
+<h1>Edit Your Request</h1>
+
+<%= form_for :request, url: requests_path(@article), method: :patch do |f| %>
+
+    <% if @request.errors.any? %>
+        <div id="request-submit-errors">
+          <ul>
+            <% @request.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= f.label :department %>
+    <%= f.text_field :department %>
+    <br>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <br>
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+    <br>
+    <%= f.submit "Submit Request" %>
+
+<% end %>
