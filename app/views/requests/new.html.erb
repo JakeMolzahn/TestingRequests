@@ -1,9 +1,9 @@
-<h1>Request a Test</h1>
+
 
 <%= form_for :request, url: requests_path do |f| %>
 
     <% if @request.errors.any? %>
-      <div id="request-submit-errors">
+      <div id="request-submit-errors" class="col-md-offset-4 col-md-4">
         <ul>
           <% @request.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
@@ -12,18 +12,54 @@
       </div>
     <% end %>
 
-    <%= f.label :department %>
-    <%= f.text_field :department %>
-    <br>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <br>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-    <br>
-    <%= f.label :date %>
-    <%= f.text_field :date %>
-    <br>
-    <%= f.submit "Submit Request" %>
+ <div class="row">
+
+   <div class="col-md-4 col-md-offset-4">
+     <h1>Request a Test</h1>
+   </div>
+   <div class="col-md-4 col-md-offset-4">
+     <div class="row">
+       <div class="col-md-4">
+         <%= f.label :department %>
+       </div>
+       <div class="col-md-8">
+         <%= f.text_field :department %>
+       </div>
+     </div>
+   </div>
+   <div class="col-md-4 col-md-offset-4">
+     <div class="row">
+       <div class="col-md-4">
+         <%= f.label :title %>
+       </div>
+       <div class="col-md-8">
+         <%= f.text_field :title %>
+       </div>
+     </div>
+   </div>
+   <div class="col-md-4 col-md-offset-4">
+     <div class="row">
+       <div class="col-md-4">
+         <%= f.label :description %>
+       </div>
+       <div class="col-md-8">
+         <%= f.text_area :description %>
+       </div>
+     </div>
+   </div>
+   <div class="col-md-4 col-md-offset-4">
+     <div class="row">
+       <div class="col-md-4">
+         <%= f.label :date %>
+       </div>
+       <div class="col-md-8">
+         <%= f.text_field :date %>
+       </div>
+     </div>
+   </div>
+   <div class="col-md-4 col-md-offset-4">
+     <%= f.submit "Submit Request" %>
+   </div>
+ </div>
 
 <% end %>
