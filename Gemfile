@@ -30,14 +30,9 @@ gem 'spring',        group: :development
 
 
 # Authentication
-gem 'devise', '3.2.4'
+#gem 'devise', '3.2.4'
 gem 'omniauth', '1.2.1'
 gem 'omniauth-google-oauth2', '0.2.4'
-
-
-
-
-
 
 
 # Use ActiveModel has_secure_password
